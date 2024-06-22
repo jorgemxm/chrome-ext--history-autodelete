@@ -40,7 +40,7 @@
     "scripts": {
         "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*",
         "build": "./node_modules/.bin/webpack --config webpack.config.js && ./tools/buildFilesDev.sh",
-        "dev": "./node_modules/.bin/webpack --config webpack.config.js --progress --colors --watch",
+        "dev": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.config.js --progress --colors --watch",
         "lint": "./node_modules/.bin/eslint --fix --ext=.js,.json src/** test/** extension/_locales/**",
         "test-all": "npm run test && npm run lint"
     },

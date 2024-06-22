@@ -4,6 +4,7 @@ const plugins = [
   //       analyzerMode: 'static'
   // })
 ];
+const devtool = process.env.NODE_ENV === "development" ? "cheap-source-map" : ""
 const moduleConfig = {
   rules: [
     {
@@ -56,6 +57,7 @@ const settingConfig = {
         path: `${__dirname}/extension/settings`,
         filename: "settingsBundle.js",
     },
+    devtool,
     externals: {
         // "node/npm module name": "name of exported library variable"
         "react": "React",

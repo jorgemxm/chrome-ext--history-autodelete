@@ -125,7 +125,7 @@ browser.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
 				text: "X", tabId: tab.id
 			});
 			browser.browserAction.setBadgeBackgroundColor({
-				color: "red", tabId: tab.id
+				color: "#EF89A5", tabId: tab.id
 			});
 		} else {
 			browser.browserAction.enable(tab.id);

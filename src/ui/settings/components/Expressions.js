@@ -41,6 +41,9 @@ class Expressions extends React.Component {
 	}
 
 	addExpressionByInput(payload) {
+		if (!payload.expression) {
+			return;
+		}
 		const {onNewExpression} = this.props;
 		onNewExpression(payload);
 		this.setState({expressionInput: ""});
@@ -62,7 +65,7 @@ class Expressions extends React.Component {
 				<h1>List of Expressions</h1>
 
 				<div className="md-form">
-					<label htmlFor="form1" className="">Enter Expression:</label>
+					<label htmlFor="form1" className="">Enter Expression:&nbsp;</label>
 					<input
 						style={{
 							display: "inline", width: "50%"
@@ -71,7 +74,7 @@ class Expressions extends React.Component {
 						onChange={(e) => this.setState({expressionInput: e.target.value})}
 						onKeyPress={(e) => {
 							if (e.key === "Enter") {
-								this.addExpressionByInput({expression: this.state.expressionInput});
+								this.addExpressionByInput({expression: this.state.expressionInput.trim() });
 							}
 						}}
 						type="text"

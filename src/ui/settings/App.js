@@ -11,7 +11,7 @@ const styles = {
 };
 
 class App extends Component {
-		state = {activeTab: "tabWelcome"}
+		state = {activeTab: "tabExpressionList"}
 
 		switchTabs(newActiveTab) {
 			this.setState({activeTab: newActiveTab});
