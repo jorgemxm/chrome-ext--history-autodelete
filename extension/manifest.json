@@ -11,7 +11,7 @@
 	]
   },
   "description": "Control your history. Automatically and selectively delete history.",
-  "homepage_url": "https://github.com/naresh97/History-AutoDelete-Rebooted",
+  "homepage_url": "https://github.com/jorgemxm/chrome-ext--history-autodelete",
   "browser_action": {
     "default_icon": {
       "24": "icons/icon_24.png",
@@ -37,6 +37,6 @@
     "alarms"
   ],
   "manifest_version": 2,
-  "name": "History AutoDelete Rebooted",
-  "version": "3.0.1"
+  "name": "History AutoDelete",
+  "version": "3.1.0"
 }

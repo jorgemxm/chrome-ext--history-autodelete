@@ -26,12 +26,12 @@ class Expressions extends React.Component {
 	}
 
 	importExpressions(files) {
-		const {onNewRawExpression} = this.props;
+		const {onNewExpression} = this.props;
 		let reader = new FileReader();
 		reader.onload = (file) => {
 			try {
 				const newExpressions = JSON.parse(file.target.result);
-				newExpressions.forEach((regExp) => onNewRawExpression(regExp));
+				newExpressions.forEach((regExp) => onNewExpression(regExp));
 			} catch (error) {
 				this.setState({error: error.toString()});
 			}
