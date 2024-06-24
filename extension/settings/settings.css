@@ -92,7 +92,7 @@ input[type="file"] {
     display: none;
 }
 #menu {
-	width: 10em;
+	width: 12em;
 	background-color: #26292E;
 	height: 100%;
 	position: fixed;
@@ -103,6 +103,7 @@ input[type="file"] {
 }
 
 .pure-menu-item {
+	border-left: 2px solid transparent;
 	padding-top: 1em;
 	padding-left: 1em;
 	padding-bottom: 1em;
@@ -117,6 +118,7 @@ input[type="file"] {
 .pure-menu-item span {
 	color: #C1C1B4;
 	font: message-box;
+	font-size: 1.5rem;
 }
 
 .pure-menu-selected {
